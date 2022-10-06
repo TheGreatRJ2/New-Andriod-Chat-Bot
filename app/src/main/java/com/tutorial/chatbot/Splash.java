@@ -21,9 +21,9 @@ LottieAnimationView lottieAnimationView;
        new Handler().postDelayed(new Runnable() {
            @Override
            public void run() {
-               Intent intent = new Intent(Splash.this,MainActivity.class);
+               Intent intent = new Intent(Splash.this,Home.class);
                startActivity(intent);
            }
-       }, 6000);
+       }, 5000);
     }
 }

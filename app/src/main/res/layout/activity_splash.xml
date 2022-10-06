@@ -11,24 +11,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
         android:text="HEALING TOUCH"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/robotGif"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="300dp"
+        android:layout_marginStart="54dp"
         android:layout_marginTop="45dp"
+        android:layout_marginEnd="54dp"
         android:src="@drawable/robot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="54dp" />
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/meditateImg"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="75dp"
+        android:src="@drawable/meditate_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/robotGif"
+        app:layout_constraintVertical_bias="0.25" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

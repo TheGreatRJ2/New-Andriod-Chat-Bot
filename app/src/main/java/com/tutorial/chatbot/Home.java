@@ -1,6 +1,7 @@
 package com.tutorial.chatbot;
 
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -18,11 +19,13 @@ public class Home extends AppCompatActivity {
 
         final MediaPlayer musicMP = MediaPlayer.create(this, R.raw.back_music);
 
-        Button sound = (Button) this.findViewById(R.id.soundBtn);
+        Button chatBtn = this.findViewById(R.id.chatBtn);
 
-        sound.setOnClickListener(new View.OnClickListener() {
+        chatBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(Home.this, MainActivity.class);
+                startActivity(intent);
                 musicMP.start();
             }
         });
