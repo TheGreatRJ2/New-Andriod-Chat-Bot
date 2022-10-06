@@ -1,7 +1,6 @@
 package com.tutorial.chatbot;
 
 
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -27,16 +26,12 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageView;
     ArrayList<Chatsmodal> chatsmodalArrayList;
     ChatAdapter chatAdapter;
-    MediaPlayer player;
-    private  final String USER_KEY = "user";
-    private  final String BOT_KEY = "bot";
+    private final String USER_KEY = "user";
+    private final String BOT_KEY = "bot";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        player = MediaPlayer.create(MainActivity.this,R.raw.back_music);
-        player.start();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.chat_recycler);
@@ -47,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(chatAdapter);
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     private void getResponse(String message) {
         chatsmodalArrayList.add(new Chatsmodal(message,USER_KEY));
         chatAdapter.notifyDataSetChanged();
-        String url = "http://api.brainshop.ai/get?bid=160167&key=8h8vRUhkZo5zyBrO&uid=[uid]&msg="+message;
+        String url = "http://api.brainshop.ai/get?bid=169632&key=lQP1T5g0U952uBFi&uid=[uid]&msg="+message;
         String BASE_URL = "http://api.brainshop.ai/";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)

@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/Plum"
-    >
+    android:background="@color/MediumSeaGreen">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/MediumOrchid"
+        android:background="@color/YellowGreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,20 +25,22 @@
             app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/black">
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/bot_img" />
+                android:src="@drawable/bot_img"
+                android:background="@color/YellowGreen"/>
         </androidx.cardview.widget.CardView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Chat bot"
+            android:text="Healing Touch Bot"
             android:textColor="@color/black"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/cardView"
